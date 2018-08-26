@@ -16,11 +16,20 @@ public class Answer {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
-    @OneToOne
-    private Question question;
-
     @NotNull
     private String answer;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
+    private Question question;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public Question getQuestion() {
         return question;
@@ -37,4 +46,6 @@ public class Answer {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+
 }

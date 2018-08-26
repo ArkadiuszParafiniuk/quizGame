@@ -19,7 +19,7 @@ public class QuestionsBaseServiceImpl implements QuestionsBaseService {
 
     @Override
     public int getAmountOfQuestions() {
-        return 0;
+        return questionRepository.countUsers();
     }
 
     @Override
@@ -29,11 +29,11 @@ public class QuestionsBaseServiceImpl implements QuestionsBaseService {
 
     @Override
     public void removeQuestion(Question question) {
-
+        //to do
     }
 
     @Override
     public void removeQuestionByQuestionNumber(int questionNumber) {
-
+        //to do
     }
 }

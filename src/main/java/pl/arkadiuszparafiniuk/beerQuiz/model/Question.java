@@ -34,9 +34,6 @@ public class Question {
     @NotNull
     private String optionD;
 
-    @OneToOne
-    private Answer answer;
-
     public long getId() {
         return id;
     }
@@ -93,11 +90,17 @@ public class Question {
         this.optionD = optionD;
     }
 
-    public Answer getAnswer() {
-        return answer;
-    }
 
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", questionNumber=" + questionNumber +
+                ", question='" + question + '\'' +
+                ", optionA='" + optionA + '\'' +
+                ", optionB='" + optionB + '\'' +
+                ", optionC='" + optionC + '\'' +
+                ", optionD='" + optionD + '\'' +
+                '}';
     }
 }
